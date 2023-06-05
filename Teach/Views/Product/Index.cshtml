@@ -1,0 +1,24 @@
+﻿@model List<KitapModalView>
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AUTHOR</th>
+        </tr>
+        <tr>
+            @foreach (var books in Model)
+            {
+            <tr>
+                <td>@books.Id</td>
+                <td>@books.Name</td>
+                <td>@books.Author</td>
+            </tr>
+}      </table>
+<br />
+<h2>Gelecek kitaplar</h2>
+@await Component.InvokeAsync("NewBooks")
+
+
+@Html.Partial("_PartialPage")

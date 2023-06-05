@@ -1,0 +1,18 @@
+﻿@model List<KitapModalView>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AUTHOR</th>
+    </tr>
+    <tr>
+        @foreach (var book in Model)
+        {
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Name</td>
+            <td>@book.Author</td>
+        </tr>
+    }
+    </table>
